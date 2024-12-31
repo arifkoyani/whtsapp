@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import twilio from "twilio";
 
-const accountSid = "ACfb368fcda1baa449ce35a09b3e1f2279";
-const authToken = "1baf9487cac8eaf3bd420110f9ac55e3";
+const accountSid =process.env.accountSid;
+const authToken =process.env.authToken;
 const client = twilio(accountSid, authToken);
 
 export async function POST(req) {
